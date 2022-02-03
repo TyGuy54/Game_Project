@@ -1,0 +1,10 @@
+TODO for the game: 
+1.) Impliment some Y sorting becuase the player overlapping everything is getting kind of irritating!
+
+2.) Have when the player attacks there a little swoosh so its easier to see if the player is attacking.
+
+3.) Draw some player movemnt and direction so hes not facing the same way all the time!
+
+4.) Make some better floor tiles.
+
+5.) refactor some code so it wont be a pain in the ass later to fix!
