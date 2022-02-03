@@ -8,3 +8,4 @@ TODO for the game:
 4.) Make some better floor tiles.
 
 5.) refactor some code so it wont be a pain in the ass later to fix!
+	5a.) When the player attacks it gives a lot of errors
