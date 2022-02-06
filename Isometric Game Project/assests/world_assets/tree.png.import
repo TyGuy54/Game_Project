@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/isometric_player_character.png-5bb7de692fde89daeb7655a183bf88c8.stex"
+path="res://.import/tree.png-a174a5d13dd3eb6a9a2334270b3c5fdc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/isometric_player_character.png"
-dest_files=[ "res://.import/isometric_player_character.png-5bb7de692fde89daeb7655a183bf88c8.stex" ]
+source_file="res://assests/world_assets/tree.png"
+dest_files=[ "res://.import/tree.png-a174a5d13dd3eb6a9a2334270b3c5fdc.stex" ]
 
 [params]
 

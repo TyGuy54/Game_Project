@@ -8,3 +8,4 @@ func handle_hit():
 	print('Enemy health ', health)
 	if health <= 0:
 		queue_free()
+

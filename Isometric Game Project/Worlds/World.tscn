@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assests/wall.png" type="Texture" id=1]
 [ext_resource path="res://assests/white_tile1.png" type="Texture" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enimies/test_dummy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assests/tree.png" type="Texture" id=5]
+[ext_resource path="res://assests/world_assets/tree.png" type="Texture" id=5]
+[ext_resource path="res://tree.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 6, 25, 20, 18, 26, 21, 13, 28 )
@@ -125,27 +126,58 @@ __meta__ = {
 12"
 }
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 76, 100 )
-speed = 150
-
 [node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 76, 100 )
+
+[node name="test_dummy" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 185, 94 )
+z_as_relative = false
+
+[node name="trees" type="YSort" parent="YSort"]
+
+[node name="tree10" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 159, 2 )
+
+[node name="tree" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( -7, -49 )
+
+[node name="tree2" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 293, 68 )
+
+[node name="tree3" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( -27, 113 )
+
+[node name="tree4" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 404, 148 )
+
+[node name="tree5" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 205, 252 )
+
+[node name="tree6" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( -77, 100 )
+
+[node name="tree7" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( -138, 6 )
+
+[node name="tree9" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 58, 261 )
+
+[node name="tree8" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( -264, 73 )
+
+[node name="tree11" parent="YSort/trees" instance=ExtResource( 6 )]
+position = Vector2( 363, 237 )
 
 [node name="Wall" type="TileMap" parent="YSort"]
 mode = 1
 tile_set = SubResource( 2 )
 cell_size = Vector2( 24, 12 )
-cell_tile_origin = 2
+cell_tile_origin = 1
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -393220, 3, 0, -458748, 3, 0, -393199, 3, 0, 327681, 3, 0, 327698, 3, 0, 458763, 3, 0 )
 __meta__ = {
 "_editor_description_": "24
 12"
 }
-
-[node name="YSort2" type="YSort" parent="."]
-
-[node name="test_dummy" parent="YSort2" instance=ExtResource( 4 )]
-position = Vector2( 185, 94 )
-z_as_relative = false
