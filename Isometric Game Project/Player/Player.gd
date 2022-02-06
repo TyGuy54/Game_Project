@@ -15,11 +15,16 @@ func get_player_movement(key):
 	if Input.is_physical_key_pressed(key["A"]): velocity.x -= 1
 	if Input.is_physical_key_pressed(key["S"]): velocity.y += .5
 	if Input.is_physical_key_pressed(key["D"]): velocity.x += 1
+	
+	#velocity.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+	#velocity.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 		
 	velocity = velocity.normalized() * player_movement_speed
 	
-	if velocity: animation_player.play("Run_Left")
-	else: animation_player.play('Idle')
+	if velocity: 
+		animation_player.play("Run_Left")
+	else: 
+		animation_player.play('Idle')
 
 
 #### DASH LOGIC ####
@@ -55,10 +60,12 @@ func end_dash():
 	is_dashing = false
 	dash_cooldown_timer.start()
 	
-func open_dash(): is_cooling = false
+func open_dash(): 
+	is_cooling = false
 
 func dash_if_so(event):
-	if is_dashing || is_cooling || not event is InputEventKey || event.is_echo(): return
+	if is_dashing or is_cooling or not event is InputEventKey or event.is_echo(): 
+		return
 	if event.get_scancode() == KEY_VALUES["SHIFT"] && event.is_pressed():
 		perform_dash()
 
@@ -93,49 +100,3 @@ func _physics_process(delta):
 func _input(event):
 	dash_if_so(event)
 	player_attack()
-
-
-
-
-## for now this is jut some basic movment code for the pourpose of prototyping!
-#
-#export var speed = 200  
-
-#
-#var velocity = Vector2.ZERO
-#var animation_player = null
-#
-#func _ready():
-#	animation_player = $AnimationPlayer
-#
-## this is so the player moves isometricly in a grid some what.
-#func cartision_to_isometric(cartision):
-#	return Vector2(cartision.x - cartision.y, (cartision.x + cartision.y) / 2)
-#
-## getting input from the player
-#func get_movement_input():
-#	velocity = Vector2.ZERO
-#
-#	velocity.x = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-#	velocity.y = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
-#
-#	velocity = velocity.normalized() * speed
-#	print(velocity)
-#	velocity = cartision_to_isometric(velocity)
-#
-#	if velocity != Vector2.ZERO:
-#		animation_player.play("Run_Left")
-#	else:
-#		animation_player.play('Idle')
-#
-#
-
-#
-## all the players pysics
-#func _physics_process(delta):
-#	get_movement_input()
-#	velocity = move_and_slide(velocity)
-#
-#func _input(event):
-#	player_atack()
-

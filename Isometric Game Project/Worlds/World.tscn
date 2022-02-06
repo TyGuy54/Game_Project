@@ -5,7 +5,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enimies/test_dummy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assests/world_assets/tree.png" type="Texture" id=5]
-[ext_resource path="res://tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enviorment/tree/tree.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 6, 25, 20, 18, 26, 21, 13, 28 )
@@ -134,11 +134,12 @@ position = Vector2( 76, 100 )
 [node name="test_dummy" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 185, 94 )
 z_as_relative = false
+run_speed = 45
 
 [node name="trees" type="YSort" parent="YSort"]
 
 [node name="tree10" parent="YSort/trees" instance=ExtResource( 6 )]
-position = Vector2( 159, 2 )
+position = Vector2( 148, -18 )
 
 [node name="tree" parent="YSort/trees" instance=ExtResource( 6 )]
 position = Vector2( -7, -49 )

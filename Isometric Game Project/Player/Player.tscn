@@ -9,7 +9,7 @@ radius = 5.09902
 
 [sub_resource type="Animation" id=3]
 resource_name = "Idle"
-length = 0.3
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -18,10 +18,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 0, 0, 1, 1, 2, 2 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -41,7 +41,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "Run_Left"
-length = 0.7
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -61,6 +61,7 @@ extents = Vector2( 3.5, 10 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
+dash_multiplier = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
