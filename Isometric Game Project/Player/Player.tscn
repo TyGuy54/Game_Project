@@ -90,5 +90,4 @@ disabled = true
 current = true
 smoothing_enabled = true
 
-[connection signal="player_attack" from="." to="attack_box" method="_on_Player_player_attack"]
 [connection signal="body_entered" from="attack_box" to="attack_box" method="_on_attack_box_body_entered"]
