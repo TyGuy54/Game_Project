@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 export var tree_health = 25
-export var item_log = preload("res://Enviorment/tree/log.tscn")
 
 func handle_hit():
 	tree_health -= 5
@@ -12,6 +11,7 @@ func handle_hit():
 		queue_free()
 
 func dropped_item():
+	var item_log = preload("res://Enviorment/tree/log.tscn")
 	var item = item_log.instance()
 	item.position = position
 	get_parent().add_child(item)

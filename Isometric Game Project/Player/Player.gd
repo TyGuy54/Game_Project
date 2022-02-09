@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends "res://Player/player_class.gd" # inhereits from player_class.gd
 
 
 #### PLAYER MOVEMENT & ANIMATION ####
@@ -15,10 +15,7 @@ func get_player_movement(key):
 	if Input.is_physical_key_pressed(key["A"]): velocity.x -= 1
 	if Input.is_physical_key_pressed(key["S"]): velocity.y += .5
 	if Input.is_physical_key_pressed(key["D"]): velocity.x += 1
-	
-	#velocity.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-	#velocity.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-		
+
 	velocity = velocity.normalized() * player_movement_speed
 	
 	if velocity: 
@@ -69,22 +66,6 @@ func dash_if_so(event):
 	if event.get_scancode() == KEY_VALUES["SHIFT"] && event.is_pressed():
 		perform_dash()
 
-
-#### ATTACK LOGIC ####
-signal player_attack(attack)
-
-export var player_damage = 5
-
-func player_attack():
-	var attack = Input.is_action_pressed("attack")
-	if attack == true:
-		$attack_box/damage_zone.disabled = false
-		emit_signal('player_attack', player_damage)
-	else:
-		$attack_box/damage_zone.disabled = true
-		print("im not attacking")
-
-
 #### ENGINE ACTIONS ####
 func _ready():
 	animation_player = $AnimationPlayer
@@ -99,4 +80,4 @@ func _physics_process(delta):
 
 func _input(event):
 	dash_if_so(event)
-	player_attack()
+	player_attack("sword")
