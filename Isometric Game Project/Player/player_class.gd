@@ -15,14 +15,7 @@ export var equiped = false
 var level = 0
 
 
-func player_attack(weapon):
-	#### ATTACK LOGIC ####
-	if Input.is_action_pressed("attack"):
-		$attack_box/damage_zone.disabled = false
-		player_summon_weapon("sword")
-		print("I am attacking for: ", base_damage)
-	else:
-		$attack_box/damage_zone.disabled = true
+
 	
 # keeps track of the players current level
 func player_levels():

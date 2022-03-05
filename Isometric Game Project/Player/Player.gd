@@ -5,9 +5,14 @@ extends "res://Player/player_class.gd" # inhereits from player_class.gd
 export var player_movement_speed = 100
 var velocity
 var animation_player
+onready var sword = get_node("sword")
+onready var sword_animation = sword.get_node("Sword_animatoin_player")
 
+# a constant for player input for WSAD and SHIFT
 var KEY_VALUES = {"W": 87, "A": 65, "S": 83, "D": 68, "SHIFT": 16777237}
 
+# player movemnt function that takes in a key as the parameter
+# The function handles player movment physics
 func get_player_movement(key):
 	velocity = Vector2()
 	
@@ -15,6 +20,7 @@ func get_player_movement(key):
 	if Input.is_physical_key_pressed(key["A"]): velocity.x -= 1
 	if Input.is_physical_key_pressed(key["S"]): velocity.y += .5
 	if Input.is_physical_key_pressed(key["D"]): velocity.x += 1
+		
 
 	velocity = velocity.normalized() * player_movement_speed
 	
@@ -80,4 +86,5 @@ func _physics_process(delta):
 
 func _input(event):
 	dash_if_so(event)
-	player_attack("sword")
+	if Input.is_action_pressed("attack") and not sword_animation.is_playing():
+		sword_animation.play("player_attack")
