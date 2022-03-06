@@ -1,4 +1,4 @@
-extends "res://Player/player_class.gd" # inhereits from player_class.gd
+extends player_stats # inhereits from player_class.gd
 
 
 #### PLAYER MOVEMENT & ANIMATION ####

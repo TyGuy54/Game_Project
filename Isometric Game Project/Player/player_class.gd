@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name player
+class_name player_stats
 
 # player stats
 export var health = 20

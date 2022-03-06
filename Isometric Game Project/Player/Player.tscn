@@ -181,10 +181,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -37.4, 0.0 ]
+"values": [ 0.0, -37.4, 0.0, 0.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("attack_box/damage_zone:position")
@@ -193,10 +193,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3, -4 ), Vector2( -1, -2 ) ]
+"values": [ Vector2( 3, -4 ), Vector2( -1, -2 ), Vector2( 3, -4 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
