@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green_tick.png-0d14c54868fcc941ed26eb0680a72e6b.stex"
+path="res://.import/grey_panel.png-27e2a1c476665aa384bd53bf8d4173cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/inventory/green_tick.png"
-dest_files=[ "res://.import/green_tick.png-0d14c54868fcc941ed26eb0680a72e6b.stex" ]
+source_file="res://assests/inventory_assests/grey_panel.png"
+dest_files=[ "res://.import/grey_panel.png-27e2a1c476665aa384bd53bf8d4173cb.stex" ]
 
 [params]
 

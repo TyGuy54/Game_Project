@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="Isometric Game Project"
 config/icon="res://icon.png"
 
+[autoload]
+
+JsonData="*res://JSON_data.gd"
+
 [display]
 
 window/size/test_width=1024

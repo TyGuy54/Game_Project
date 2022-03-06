@@ -1,7 +1,7 @@
 extends Panel
 
-var default_tex = preload("res://assests/inventory/grey_box.png")
-var empty_tex = preload("res://assests/inventory/grey_box.png")
+var default_tex = preload("res://assests/inventory_assests/grey_box.png")
+var empty_tex = preload("res://assests/inventory_assests/grey_box.png")
 
 var default_style = null
 var empty_style = null

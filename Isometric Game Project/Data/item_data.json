@@ -1,0 +1,17 @@
+{
+    "Iron Sword": {
+        "ItemCategory": "Sword",
+        "StackSize": "1",
+        "Description": "Just an everyday iron sword"
+    },
+    "Tree Log": {
+        "ItemCategory": "Resource",
+        "StackSize": "99",
+        "Description": "It,s a very large log"
+    },
+    "Potion": {
+        "ItemCategory": "Consumable",
+        "StackSize": "20",
+        "Description": "It's so red! I wonder if its good?"
+    }
+}
